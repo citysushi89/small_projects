@@ -18,11 +18,8 @@ MORSE_CODE_DICT = {"a": ".-|", "b": "-...|", "c": "-.-.|", "d": "-..|", "e": ".|
 while True:
     # ask user for input conditions
     user_input = input("Input the message you would like to type here: ").lower()
-    print(user_input)
     encryption_or_decryption = input("Do you want to encrypt or decrypt?:").lower()
-    print(encryption_or_decryption)
     user_method = input("Would you like to Use Morse Code or the Caesar Cipher?").lower()
-    print(user_method)
     # Get the key to encrypt/decrypt Caesar Cipher with
     if user_method == "caesar cipher":
         while True:
@@ -89,7 +86,6 @@ while True:
                 pass
             else:
                 new_letter_index = (int(ALPHABET.index(item)) + int(key)) % len(ALPHABET)
-                print(new_letter_index)
                 message_encoded_list.append(ALPHABET[new_letter_index])
 
         # Compiling and printing the encoded message
