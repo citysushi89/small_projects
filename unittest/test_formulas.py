@@ -23,6 +23,10 @@ class TestAdd(unittest.TestCase):
     def test_add_two_negative(self):
         self.assertEqual(add(-2, -3), -5)
 
+    def test_for_miss_input(self):
+        with self.assertRaises(TypeError):
+            add("word", 3)
+
 
 class SubtractTest(unittest.TestCase):
     # Test the function of subtract from formulas.py 
@@ -40,6 +44,10 @@ class SubtractTest(unittest.TestCase):
     def test_subtract_two_negative(self):
         self.assertEqual(subtract(-8, -4), -4)
 
+    def test_for_miss_input(self):
+        with self.assertRaises(TypeError):
+            add([], 3)
+
 
 class TestDivide(unittest.TestCase):
     # Test the function of divide from formulas.py 
@@ -56,6 +64,10 @@ class TestDivide(unittest.TestCase):
     def test_divide_two_negative(self):
         self.assertEqual(divide(-8, -2), 4)
 
+    def test_for_miss_input(self):
+        with self.assertRaises(TypeError):
+            add("word", 3)
+
 
 class TestMultiply(unittest.TestCase):
     # Test the function of divide from formulas.py
@@ -71,3 +83,7 @@ class TestMultiply(unittest.TestCase):
 
     def test_multiply_two_negative(self):
         self.assertEqual(multiply(-5, -2), 10)
+
+    def test_for_miss_input(self):
+        with self.assertRaises(TypeError):
+            add({}, 3)
