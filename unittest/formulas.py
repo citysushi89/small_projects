@@ -19,6 +19,3 @@ def multiply(x, y):
     if not isinstance(x, int) and not isinstance(x, float) or not isinstance(y, int) and not isinstance(y, float):
         raise TypeError("Arguments must be an integer or a float")
     return x * y
-
-x = 2.4
-print(isinstance(x, float))
